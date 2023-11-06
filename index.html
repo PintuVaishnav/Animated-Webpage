@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Animated webpage</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+    <body>
+        
+        <section>
+            <img src="stars.png" id="stars">
+            <img src="moon.png" id="moon">
+            <img src="mountains_behind.png" id="mountains_behind">
+           <h2 id="text">Ani World!</h2>
+            <a href="#sec" id="btn">Explore</a>
+            <img src="mountains_front.png" id="mountains_front">
+        </section>
+      
+        <header>
+            <a href="#" class="logo">Anime</a>
+            <div class="search-container">
+                <input type="text" id="search-input" placeholder="Search...">
+                <button id="search-button">Search</button>
+            </div>
+            <div id="search-results">
+                
+            </div>
+            <ul>
+                <li><a href="#" >Home</a></li>
+                <li><a href="#" >About</a></li>
+                <li><a href="#" >Work</a></li>
+                <li><a href="#" >Contact</a></li>
+
+            </ul>
+        </header>
+        <div class="sec" id="sec">
+<h2>All about Anime</h2>
+<p>Anime is a style of animation that originated in Japan and has become popular worldwide. It encompasses a wide range of genres and themes, making it a versatile and diverse form of entertainment. Here are some key aspects of anime</p>
+<p>Artistic Style: Anime is characterized by its unique artistic style, which often features colorful artwork, exaggerated facial expressions, and distinct character designs. This style can vary greatly from one anime to another, depending on the studio and director.</p>        
+<p>Genres: Anime covers a broad spectrum of genres, including but not limited to:
+
+    Shonen: Targeted primarily at young boys and often features action, adventure, and friendship themes.Shojo: Geared towards young girls and often focuses on romance, relationships, and personal growth.
+    Seinen: Aimed at adult men and typically explores more mature and complex themes.
+    Josei: Geared towards adult women and often delves into realistic portrayals of relationships and everyday life.
+    Mecha: Involves giant robots and futuristic technology.<br>
+    Isekai: Features characters who are transported to another world or dimension.
+    Slice of Life: Depicts everyday life and everyday people's experiences.</p>
+<p>Manga Adaptations: Many anime series are adaptations of manga, which are Japanese comic books or graphic novels. Manga serves as the source material for these adaptations.
+
+    Fandom and Conventions: Anime has a dedicated global fanbase.<br> <br>Fans often gather at conventions to celebrate their favorite shows, cosplay as characters, and participate in various activities related to anime and manga.</p>
+<p>Studio Ghibli: Studio Ghibli is a renowned Japanese animation studio known for producing critically acclaimed films like "Spirited Away," "My Neighbor Totoro," and "Princess Mononoke."
+
+    Popular Series: Some anime series have gained immense popularity both in Japan and internationally.<br><br> Examples include "Naruto," "Dragon Ball," "One Piece," "Attack on Titan," "Death Note," "Fullmetal Alchemist," and "My Hero Academia."
+    
+    Streaming Services: In recent years, anime has become more accessible through streaming services like Crunchyroll, Funimation, Netflix, and Hulu.<br><br> This has made it easier for fans to watch anime legally and with subtitles or dubbing in various languages.
+    
+    Cultural Influence: Anime has had a significant impact on global pop culture, influencing art, fashion, and entertainment in various ways. <br><br>It has also inspired many Western animated series and films.
+    
+    Adult Content: While there is a wide range of anime suitable for all age groups, some series contain explicit content, violence, or mature themes. It's important for viewers to be aware of the content rating before watching.
+    
+    Continued Innovation: The anime industry continues to evolve, with advancements in animation technology, storytelling techniques, and new creative ideas.<br><br>
+    
+    Anime's appeal lies in its ability to tell diverse and engaging stories, explore complex characters, and transport viewers to imaginative worlds. Whether you're a casual viewer or a dedicated fan, there's likely an anime series that suits your tastes and interests.</p>
+</div>
+<script>
+    let stars = document.getElementById('stars');
+    let moon = document.getElementById('moon');
+    let mountains_behind = document.getElementById('mountains_behind');
+    let text = document.getElementById('text');
+    let btn = document.getElementById('btn');
+    let mountains_front = document.getElementById('mountains_front');
+    let header = document.querySelector('header');
+
+    window.addEventListener('scroll',function(){
+        let value = window.scrollY;
+        stars.style.left = value * 0.25 + 'px';
+        moon.style.top = value * 1.05 + 'px';
+        mountains_behind.style.top = value * 0.5 + 'px';
+        mountains_front.style.top = value * 0 + 'px';
+        text.style.marginright = value * 4 + 'px';
+        text.style.marginTop= value * 1.5 + 'px';
+        btn.style.marginTop= value * 1.5 + 'px';
+        header.style.top = value * 0.5 + 'px';
+    })
+   
+
+</script>
+    </body>
+</html>
